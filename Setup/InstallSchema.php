@@ -5,7 +5,7 @@ namespace Convertcart\Analytics\Setup;
 use Magento\Framework\Setup\SchemaSetupInterface;
 use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\DB\Ddl\Table;
-use Magento\Framework\Exception\LocalizedException;
+
 
 class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
 {
@@ -97,7 +97,7 @@ class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
                     $conn->query($triggerSql);
                 } catch (\Exception $e) {
                     // Handle exception if trigger creation fails
-                    throw new LocalizedException(__('Error creating trigger %1: %2', $triggerName, $e->getMessage()));
+                    throw new \RuntimeException('Error creating trigger: ' . $e->getMessage());
                 }
             }
         }

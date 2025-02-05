@@ -1,7 +1,6 @@
 # Convert Cart Magento 2 Plugin
 
 ![Magento 2](https://img.shields.io/badge/Magento-2-brightgreen.svg)
-![Version](https://img.shields.io/badge/version-1.0.8-blue.svg)
 ![License](https://img.shields.io/badge/license-Proprietary-red.svg)
 [![Packagist](https://img.shields.io/packagist/v/convert-cart/analytics.svg)](https://packagist.org/packages/convert-cart/analytics)
 
@@ -107,3 +106,11 @@ If you encounter folder permission issues on folder such as cache, please use th
 ## Contact
 
 Please contact [sales@convertcart.com](mailto:sales@convertcart.com) if any issues occur during the integration process.
+
+## For Development
+
+After making any changes to the master branch, you can create new version tags (for beta and production) by running the following command:
+
+      sh tagger.sh VERSION_NUMBER
+
+Make sure to replace `VERSION_NUMBER` with the actual version number you want to create.
